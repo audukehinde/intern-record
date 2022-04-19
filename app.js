@@ -5,7 +5,7 @@ let dept = document.querySelector(".dept");
 let btnSub = document.querySelector(".btn-sub");
 let tableBody = document.getElementById("table-body");
 const updateBtn = document.getElementById("updateBtn");
-const btnAdd = document.getElementById('btnadd');
+const btnAddIntern = document.getElementById('btnadd');
 const form = document.querySelector('.form');
 const close = document.querySelector('.close');
 
@@ -13,13 +13,13 @@ close.addEventListener('click', () => {
   form.style.display = 'none';
 })
 
-btnAdd.addEventListener('click', () => {
+btnAddIntern.addEventListener('click', () => {
   form.style.display = 'block';
 });
 
 let interns = [];
 
-btnSub.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   let intern = {
     id: interns.length + 1,
@@ -30,8 +30,8 @@ btnSub.addEventListener("click", (e) => {
   };
 
   interns.push(intern);
-  console.log(interns);
-  console.log(intern);
+  // console.log(interns);
+  // console.log(intern);
 
   firstName.value = "";
   lastName.value = "";
@@ -39,13 +39,15 @@ btnSub.addEventListener("click", (e) => {
   dept.value = "";
   // console.log("added!", interns.length);
   populateTable();
+  form.style.display = "none";
 });
 
 const populateTable = () => {
   tableBody.innerHTML = "";
   interns.forEach((element) => {
     const row = document.createElement("tr");
-
+    row.classList.add("my-row");
+    
     row.append(tableData(element.id));
     row.append(tableData(element.firstName + " " + element.lastName));
     row.append(tableData(element.salary));
@@ -132,8 +134,10 @@ const updateIntern = (e) => {
 
   // update global interns array with new value of the current intern
   interns[intern.id - 1] = intern;
+
   populateTable();
   document.getElementById("editForm").style.display = "none";
+  console.log(interns);
 };
 
 // const tableData = (data) => (document.createElement("td").textContent = data);

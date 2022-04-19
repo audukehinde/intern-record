@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <title>Intern Info</title>
   </head>
   <body>
@@ -31,23 +34,51 @@
 
       <form action="" class="form">
         <span class="close">X</span>
-        <div>
+        <div class="form-des">
           <label for="name">First Name</label>
-          <input type="text" name="" id="" placeholder="John" class="first-name "/>
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="John"
+            class="first-name"
+          />
         </div>
 
-        <div>
+        <div class="form-des">
           <label for="name">Last Name</label>
-          <input type="text" name="" id="" placeholder="Deo" class="last-name"class="last-name"/>
-        </div> 
-       
-        <div>
-          <label for="salary">Salary</label>
-          <input type="text" name="" id="" placeholder="Salary" class="salary" />
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Deo"
+            class="last-name"
+            class="last-name"
+            required
+          />
         </div>
-        <div>
+
+        <div class="form-des">
+          <label for="salary">Salary</label>
+          <input
+            type="number"
+            name=""
+            id=""
+            placeholder="Salary"
+            class="salary"
+            required
+          />
+        </div>
+        <div class="form-des">
           <label for="department">Department</label>
-          <input type="text" name="" id="" placeholder="Department"class="dept" />
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Department"
+            class="dept"
+            required
+          />
         </div>
         <button class="btn-sub">Submit</button>
       </form>
@@ -55,21 +86,50 @@
       <!-- Edit intern form -->
       <form action="" class="form" id="editForm">
         <span class="close">X</span>
-        <div>
+        <div class="form-des">
           <label for="name">First Name</label>
-          <input type="text" name="" id="firstName" placeholder="John" class="first-name"/>
-        </div>
-        <div>
+          <input
+            type="text"
+            name=""
+            id="firstName"
+            placeholder="John"
+            class="first-name"
+            required
+          />
+        </div >
+        <div class="form-des">
           <label for="name">Last Name</label>
-          <input type="text" name="" id="lastName" placeholder="Deo" class="last-name" class="last-name" />
+          <input
+            type="text"
+            name=""
+            id="lastName"
+            placeholder="Deo"
+            class="last-name"
+            class="last-name"
+            required
+          />
         </div>
-        <div>
+        <div class="form-des">
           <label for="salary">Salary</label>
-          <input type="text" name="" id="salary" placeholder="Salary" class="salary" />
+          <input
+            type="number"
+            name=""
+            id="salary"
+            placeholder="Salary"
+            class="salary"
+            required
+          />
         </div>
-        <div>
+        <div class="form-des">
           <label for="department">Department</label>
-          <input type="text" name="" id="dept" placeholder="Department" class="dept" />
+          <input
+            type="text"
+            name=""
+            id="dept"
+            placeholder="Department"
+            class="dept"
+            required
+          />
         </div>
         <button class="btn-sub" id="updateBtn">Update</button>
       </form>
